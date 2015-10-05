@@ -1,0 +1,7 @@
+OPEN FIREFOX,firefox
+OPEN CHROME,google-chrome
+CLOSE FIREFOX,pkill firefox
+CLOSE CHROME,pkill google-chrome
+INCREASE VOLUME,"python -c ""import alsaaudio;m=alsaaudio.Mixer();m.setvolume(m.getvolume()[0]+50);"""
+DECREASE VOLUME,"python -c ""import alsaaudio;m=alsaaudio.Mixer();m.setvolume(m.getvolume()[0]-50);"""
+CAN YOU SHOW ME THE WEATHER,"python -c ""import pyowm;owm = pyowm.OWM('306d76a27425eec984e4812d7bed568b');observation = owm.weather_at_place('Athens,gr');print(observation.get_weather().get_temperature('celsius')['temp']);"""

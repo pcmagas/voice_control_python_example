@@ -1,0 +1,4 @@
+import alsaaudio
+m = alsaaudio.Mixer()
+m.setvolume(m.getvolume + 10) # set volume
+
